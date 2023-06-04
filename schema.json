@@ -2,8 +2,8 @@
   "type": "component",
   "metadata": {},
   "schema": {
-    "name": "bb-component-SuperTable",
-    "friendlyName": "Super Table",
+    "name": "bb-component-KinexonTable",
+    "friendlyName": "Kinexon Table",
     "description": "A Fully Customizable Table Component with Superpowers !",
     "icon": "Table",
     "styles": [

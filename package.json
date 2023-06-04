@@ -1,8 +1,8 @@
 {
-  "name": "bb-component-SuperTable",
-  "version": "1.0.23-beta",
-  "description": "A Fully Customizable Budibase Table Component with Superpowers !",
-  "author": "Michael Poirazi",
+  "name": "bb-component-KinexonTable",
+  "version": "1.0.24",
+  "description": "A Fully Customizable Kinexon Table Component with Superpowers !",
+  "author": "Max Bernstetter",
   "license": "MIT",
   "svelte": "index.js",
   "module": "dist/plugin.min.js",
