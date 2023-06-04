@@ -83,10 +83,8 @@ export const createSuperTableFilterStore = () => {
 	  subscribe,
 	  setFilter(filter) {
 		update((state) => {
-		  const index = state.filters.findIndex(
-			(v) => v.id === filter.id
-		  );
-		  
+		  const index = state.filters.findIndex((v) => v.id === filter.id);
+  
 		  // Convert the filter value and data to lowercase for case-insensitive matching
 		  const lowercaseValue = filter.value.toLowerCase();
 		  const filteredData = state.filters.filter((v) =>
@@ -101,21 +99,21 @@ export const createSuperTableFilterStore = () => {
   
 		  // Update the filtered data with the new filter
 		  state.filteredData = filteredData;
-		  
+  
 		  return state;
 		});
 	  },
 	  clearFilter(filter) {
 		update((state) => {
-		  const index = state.filters.findIndex(
-			(v) => v.id === filter.id
-		  );
+		  const index = state.filters.findIndex((v) => v.id === filter.id);
 		  state.filters.splice(index, index >= 0 ? 1 : 0);
 		  return state;
 		});
 	  },
 	};
   };
+  
+
 
 
 // The main store holds the data related and Super Table Columns registration and data synchronization
