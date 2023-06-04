@@ -84,25 +84,25 @@ export const createSuperTableFilterStore = () => {
 	  setFilter(filter) {
 		update((state) => {
 		  const index = state.filters.findIndex((v) => v.id === filter.id);
-  
-		  // Convert the filter value and data to lowercase for case-insensitive matching
 		  const lowercaseValue = filter.value.toLowerCase();
-		  const filteredData = state.filters.filter((v) =>
-			v.value.toLowerCase().includes(lowercaseValue)
-		  );
-  
+	  
 		  if (index > -1) {
 			state.filters[index] = filter;
 		  } else {
 			state.filters.push(filter);
 		  }
-  
+	  
 		  // Update the filtered data with the new filter
-		  state.filteredData = filteredData;
-  
+		  state.filteredData = state.data.filter((item) => {
+			// Convert the item value to lowercase for case-insensitive matching
+			const lowercaseItemValue = item.value.toLowerCase();
+			return lowercaseItemValue.includes("lief");
+		  });
+	  
 		  return state;
 		});
-	  },
+	  },	  
+	  
 	  clearFilter(filter) {
 		update((state) => {
 		  const index = state.filters.findIndex((v) => v.id === filter.id);
